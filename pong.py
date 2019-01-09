@@ -6,7 +6,7 @@ import random
 pygame.init()
 
 # Create Window
-win = pygame.display.set_mode((600, 500))
+win = pygame.display.set_mode((800, 500))
 icon = pygame.image.load("pong_icon.png")
 pygame.display.set_caption("Pong")
 pygame.display.set_icon(icon)
@@ -32,7 +32,7 @@ class ball(object):
 
 # Important variables
 player1 = player(2, 150)
-player2 = player(578, 150)
+player2 = player(778, 150)
 ball = ball(10)
 run = True
 draw_ball = True
@@ -130,7 +130,7 @@ while run:
     pygame.draw.rect(win, (255, 255, 255), (player1.x, player1.y, player1.widht, player1.height))
     pygame.draw.rect(win, (255, 255, 255), (player2.x, player2.y, player2.widht, player2.height))
     score = font.render("Player1: {}  Player2: {}".format(player1.score, player2.score), 1, (255,255,255))
-    win.blit(score, (220, 0))
+    win.blit(score, (320, 0))
     if draw_ball == True:
         pygame.draw.circle(win, (255, 255, 255), (ball.x, ball.y), ball.radius)
     if game == True:
@@ -138,7 +138,7 @@ while run:
         win.blit(esc, (0,0))
     if game == False:
         pause = font.render("Il Gioco è in pausa, Premi Invio per continuare", 1, (255, 255, 255))
-        win.blit(pause, (135,20))
+        win.blit(pause, (235,20))
     pygame.display.update()
 
 pygame.quit()
