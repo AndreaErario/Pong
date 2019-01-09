@@ -105,3 +105,6 @@ venv.bak/
 
 # vscode folder
 .vscode/
+
+# pong_icon for .exe file
+pong_icon.ico
